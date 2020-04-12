@@ -2,6 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
 using Transformalize.Configuration;
 using Transformalize.Context;
+using Transformalize.Contracts;
 using Transformalize.Impl;
 using Transformalize.Providers.Console;
 using Transformalize.Providers.Internal;
@@ -43,20 +44,30 @@ namespace Test.Unit.Core {
 
          Assert.AreEqual(0, process.Errors().Length);
 
-         // manually build out test without autofac to make it more of a unit test
+         var context = GetContext(process);
+         var reader = GetReader(context);
+         var rows = new FluidTransform(context).Operate(reader.Read()).ToArray();
+
+         Assert.AreEqual("Hello Dale Newman", rows[0][context.Field]);
+
+      }
+
+      private IContext GetContext(Process process) {
+         // normally a context is made by transformalize (container)
          var logger = new ConsoleLogger();
          var entity = process.Entities.First();
          var field = entity.CalculatedFields.First();
          var operation = field.Transforms.First();
-         var context = new PipelineContext(logger, process, entity, field, operation);
-         var transform = new FluidTransform(context);
-         var input = new InputContext(context);
-         var reader = new InternalReader(input, new RowFactory(input.RowCapacity, entity.IsMaster, false));
-
-         var rows = transform.Operate(reader.Read()).ToArray();
-
-         Assert.AreEqual("Hello Dale Newman", rows[0][field]);
-
+         return new PipelineContext(logger, process, entity, field, operation);
       }
+
+      private IRead GetReader(IContext context) {
+         // normally a reader is made by transformalize (container)
+         var input = new InputContext(context);
+         return new InternalReader(input, new RowFactory(input.RowCapacity, input.Entity.IsMaster, false));
+      }
+
    }
+
+
 }
