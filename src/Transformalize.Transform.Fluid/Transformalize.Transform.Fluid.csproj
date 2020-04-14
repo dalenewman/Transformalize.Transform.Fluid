@@ -1,14 +1,30 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Transformalize.Transforms.Fluid</RootNamespace>
-    <Version>0.6.28</Version>
+    <Version>0.6.28-beta</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Copyright>Copyright (c) 2020 Dale Newman</Copyright>
+    <PackageProjectUrl>https://github.com/dalenewman/Transformalize.Transform.Fluid</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/dalenewman/Transformalize.Transform.Fluid.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>transformalize,etl,liquid,fluid</PackageTags>
+    <PackageReleaseNotes>initial implementation</PackageReleaseNotes>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Fluid.Core" Version="1.0.0-beta-9637" />
     <PackageReference Include="Transformalize" Version="0.6.28-beta" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

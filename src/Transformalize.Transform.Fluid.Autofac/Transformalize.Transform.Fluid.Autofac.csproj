@@ -3,15 +3,31 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Transformalize.Transforms.Fluid.Autofac</RootNamespace>
-    <Version>0.6.28</Version>
+    <Version>0.6.28-beta</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/dalenewman/Transformalize.Transform.Fluid</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/dalenewman/Transformalize.Transform.Fluid.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Copyright>Copyright (c) 2020 Dale Newman</Copyright>
+    <PackageTags>transformalize,etl,liquid,fluid,autofac</PackageTags>
+    <NeutralLanguage>en-US</NeutralLanguage>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Transformalize.Container.Autofac" Version="0.6.28-beta" />
+    <PackageReference Include="Transformalize.Transform.Fluid" Version="0.6.28-beta" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Transformalize.Transform.Fluid\Transformalize.Transform.Fluid.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

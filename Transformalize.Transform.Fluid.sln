@@ -9,14 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.Unit.Core", "src\Test.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1FF2F0B4-B535-4BE7-BE92-2AE4624E6629}"
 	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benchmark.Core", "src\Benchmark.Core\Benchmark.Core.csproj", "{0A436BFB-AFB8-4FDC-B436-22EE07FA9AA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Benchmark.Core", "src\Benchmark.Core\Benchmark.Core.csproj", "{0A436BFB-AFB8-4FDC-B436-22EE07FA9AA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformalize.Transform.Fluid.Autofac", "src\Transformalize.Transform.Fluid.Autofac\Transformalize.Transform.Fluid.Autofac.csproj", "{08B6562F-D629-4DDD-AB22-210EE940C8DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transformalize.Transform.Fluid.Autofac", "src\Transformalize.Transform.Fluid.Autofac\Transformalize.Transform.Fluid.Autofac.csproj", "{08B6562F-D629-4DDD-AB22-210EE940C8DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Integration.Core", "src\Test.Integration.Core\Test.Integration.Core.csproj", "{EB0290E8-FF53-4CD9-B920-16A1C66657F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.Integration.Core", "src\Test.Integration.Core\Test.Integration.Core.csproj", "{EB0290E8-FF53-4CD9-B920-16A1C66657F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
