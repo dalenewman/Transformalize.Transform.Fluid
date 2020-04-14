@@ -59,6 +59,9 @@ namespace Transformalize.Transform.Fluid {
                row[Context.Field] = _convert(template.Render(context));
                yield return row;
             }
+         } else {
+            Context.Error("Failed to parse fluid template.");
+            Utility.CodeToError(Context, Context.Operation.Template);
          }
       }
 
