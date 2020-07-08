@@ -3,7 +3,6 @@ using Cfg.Net.Shorthand;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Transformalize.Configuration;
 using Transformalize.Contracts;
 
 namespace Transformalize.Transform.Fluid.Autofac {
@@ -13,12 +12,6 @@ namespace Transformalize.Transform.Fluid.Autofac {
       private ShorthandRoot _shortHand;
 
       protected override void Load(ContainerBuilder builder) {
-
-         if (!builder.Properties.ContainsKey("Process")) {
-            return;
-         }
-
-         var process = (Process)builder.Properties["Process"];
 
          // get methods and shorthand from builder
          _methods = builder.Properties.ContainsKey("Methods") ? (HashSet<string>)builder.Properties["Methods"] : new HashSet<string>();
@@ -47,7 +40,7 @@ namespace Transformalize.Transform.Fluid.Autofac {
             };
 
             foreach (var parameter in s.Parameters) {
-               signature.Parameters.Add(new Cfg.Net.Shorthand.Parameter {
+               signature.Parameters.Add(new Parameter {
                   Name = parameter.Name,
                   Value = parameter.Value
                });

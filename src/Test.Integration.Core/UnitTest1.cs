@@ -2,7 +2,6 @@ using Autofac;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Transformalize.Configuration;
 using Transformalize.Containers.Autofac;
-using Transformalize.Containers.Autofac.Modules;
 using Transformalize.Contracts;
 using Transformalize.Logging;
 using Transformalize.Providers.Bogus.Autofac;

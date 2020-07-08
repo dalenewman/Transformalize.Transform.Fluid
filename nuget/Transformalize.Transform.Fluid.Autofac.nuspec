@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Transformalize.Transform.Fluid.Autofac</id>
-    <version>0.8.15-beta</version>
+    <version>0.8.17-beta</version>
     <title>Fluid Transform for Transformalize Autofac Module</title>
     <authors>Dale Newman</authors>
     <owners>Dale Newman</owners>
@@ -16,7 +16,7 @@
     <dependencies>
       <group targetFramework="netstandard2.0">
         <dependency id="Transformalize.Container.Autofac" version="0.8.15-beta" />
-        <dependency id="Transformalize.Transform.Fluid" version="0.8.15-beta" />
+        <dependency id="Transformalize.Transform.Fluid" version="0.8.17-beta" />
       </group>
     </dependencies>
   </metadata>

@@ -2,7 +2,7 @@
 <package>
    <metadata>
       <id>Transformalize.Transform.Fluid</id>
-      <version>0.8.15-beta</version>
+      <version>0.8.17-beta</version>
       <title>Fluid Transform for Transformalize</title>
       <authors>Dale Newman</authors>
       <owners>Dale Newman</owners>
@@ -16,7 +16,7 @@
       <dependencies>
          <group targetFramework="netstandard2.0">
             <dependency id="Transformalize" version="0.8.14-beta" />
-            <dependency id="Fluid.Core" version="1.0.0-beta-9637" />
+            <dependency id="Fluid.Core" version="1.0.0-beta-9651" />
          </group>
       </dependencies>
    </metadata>

@@ -2,19 +2,19 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Transformalize.Transforms.Fluid</RootNamespace>
-    <Version>0.8.15-beta</Version>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.8.17-beta</Version>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Copyright>Copyright (c) 2020 Dale Newman</Copyright>
     <PackageProjectUrl>https://github.com/dalenewman/Transformalize.Transform.Fluid</PackageProjectUrl>
     <RepositoryUrl>https://github.com/dalenewman/Transformalize.Transform.Fluid.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>transformalize,etl,liquid,fluid</PackageTags>
-    <PackageReleaseNotes>initial implementation</PackageReleaseNotes>
+    <PackageReleaseNotes></PackageReleaseNotes>
     <NeutralLanguage>en-US</NeutralLanguage>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Fluid.Core" Version="1.0.0-beta-9637" />
+    <PackageReference Include="Fluid.Core" Version="1.0.0-beta-9651" />
     <PackageReference Include="Transformalize" Version="0.8.14-beta" />
   </ItemGroup>
   <ItemGroup>
