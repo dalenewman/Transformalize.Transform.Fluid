@@ -19,6 +19,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transformalize.Transform.Fl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.Integration.Core", "src\Test.Integration.Core\Test.Integration.Core.csproj", "{EB0290E8-FF53-4CD9-B920-16A1C66657F4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuget", "nuget", "{6FA95468-8AB1-4A3D-A072-F68A5ADDF02D}"
+	ProjectSection(SolutionItems) = preProject
+		nuget\myget.bat = nuget\myget.bat
+		nuget\nuget.bat = nuget\nuget.bat
+		nuget\Transformalize.Transform.Fluid.Autofac.nuspec = nuget\Transformalize.Transform.Fluid.Autofac.nuspec
+		nuget\Transformalize.Transform.Fluid.nuspec = nuget\Transformalize.Transform.Fluid.nuspec
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +56,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6FA95468-8AB1-4A3D-A072-F68A5ADDF02D} = {1FF2F0B4-B535-4BE7-BE92-2AE4624E6629}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4CE9CC18-D081-43CF-8926-8D3AD1432FE2}

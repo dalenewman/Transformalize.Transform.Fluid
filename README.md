@@ -17,21 +17,21 @@ The liquid template is:
 The arrangement is:
 
 ```xml
-<add name='TestProcess' read-only='true'>
+<add name="TestProcess" read-only="true">
    <connections>
-      <add name='input' provider='bogus' seed='1' />
-      <add name='output' provider='console' />
+      <add name="input" provider="bogus" seed="1" />
+      <add name="output" provider="console" />
    </connections>
    <entities>
-      <add name='Contact' size='5'>
+      <add name="Contact" size="5">
          <fields>
-            <add name='FirstName' />
-            <add name='LastName' />
-            <add name='Stars' type='byte' min='1' max='5' />
-            <add name='Reviewers' type='int' min='0' max='500' />
+            <add name="FirstName" />
+            <add name="LastName" />
+            <add name="Stars" type="byte" min="1" max="5" />
+            <add name="Reviewers" type="int" min="0" max="500" />
          </fields>
          <calculated-fields>
-            <add name='Score' raw='true' t='fluid({% assign x = Stars * Reviewers %}&lt;span>{{ x }}&lt;/span>)' />
+            <add name="Score" raw="true" t="fluid({% assign x = Stars * Reviewers %}&lt;span>{{ x }}&lt;/span>)" />
          </calculated-fields>
       </add>
    </entities>
