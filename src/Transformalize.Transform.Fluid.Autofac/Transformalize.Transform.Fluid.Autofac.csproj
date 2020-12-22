@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Transformalize.Transforms.Fluid.Autofac</RootNamespace>
-    <Version>0.8.17-beta</Version>
+    <Version>0.8.30-beta</Version>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/dalenewman/Transformalize.Transform.Fluid</PackageProjectUrl>
     <RepositoryUrl>https://github.com/dalenewman/Transformalize.Transform.Fluid.git</RepositoryUrl>
@@ -13,7 +13,7 @@
     <NeutralLanguage>en-US</NeutralLanguage>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Transformalize.Container.Autofac" Version="0.8.15-beta" />
+    <PackageReference Include="Transformalize.Container.Autofac" Version="0.8.30-beta" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Transformalize.Transform.Fluid\Transformalize.Transform.Fluid.csproj" />
