@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>Transformalize.Transform.Fluid.Autofac</id>
-    <version>0.8.30-beta</version>
+    <version>0.8.31-beta</version>
     <title>Fluid Transform for Transformalize Autofac Module</title>
     <authors>Dale Newman</authors>
     <owners>Dale Newman</owners>
@@ -10,13 +10,13 @@
     <projectUrl>https://github.com/dalenewman/Transformalize</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Fluid Transform for Transformalize Autofac Module</description>
-    <releaseNotes>update dependencies</releaseNotes>
+    <releaseNotes>fix namespace</releaseNotes>
     <copyright>Copyright 2013-2020</copyright>
     <tags>etl</tags>
     <dependencies>
       <group targetFramework="netstandard2.0">
         <dependency id="Transformalize.Container.Autofac" version="0.8.30-beta" />
-        <dependency id="Transformalize.Transform.Fluid" version="0.8.30-beta" />
+        <dependency id="Transformalize.Transform.Fluid" version="0.8.31-beta" />
       </group>
     </dependencies>
   </metadata>

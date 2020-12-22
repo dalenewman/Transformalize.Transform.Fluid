@@ -7,7 +7,7 @@ using Transformalize.Containers.Autofac;
 using Transformalize.Contracts;
 using Transformalize.Logging;
 using Transformalize.Providers.Bogus.Autofac;
-using Transformalize.Transform.Fluid.Autofac;
+using Transformalize.Transforms.Fluid.Autofac;
 
 namespace Benchmark.Core {
 

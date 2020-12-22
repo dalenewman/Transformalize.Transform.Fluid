@@ -4,9 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Transformalize.Configuration;
 using Transformalize.Contracts;
-using Transformalize.Transforms;
 
-namespace Transformalize.Transform.Fluid {
+namespace Transformalize.Transforms.Fluid {
    public class FluidTransform : BaseTransform {
 
       private readonly Func<string, object> _convert;

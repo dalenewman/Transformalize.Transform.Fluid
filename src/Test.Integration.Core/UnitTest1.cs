@@ -6,7 +6,7 @@ using Transformalize.Contracts;
 using Transformalize.Logging;
 using Transformalize.Providers.Bogus.Autofac;
 using Transformalize.Providers.Console.Autofac;
-using Transformalize.Transform.Fluid.Autofac;
+using Transformalize.Transforms.Fluid.Autofac;
 
 namespace Test.Integration.Core {
    [TestClass]

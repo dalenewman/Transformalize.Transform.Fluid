@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Transformalize.Contracts;
 
-namespace Transformalize.Transform.Fluid.Autofac {
+namespace Transformalize.Transforms.Fluid.Autofac {
    public class FluidTransformModule : Module {
 
       private HashSet<string> _methods;

@@ -6,7 +6,7 @@ using Transformalize.Contracts;
 using Transformalize.Impl;
 using Transformalize.Providers.Console;
 using Transformalize.Providers.Internal;
-using Transformalize.Transform.Fluid;
+using Transformalize.Transforms.Fluid;
 
 namespace Test.Unit.Core {
    [TestClass]
