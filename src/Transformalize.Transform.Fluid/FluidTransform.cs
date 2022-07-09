@@ -9,6 +9,7 @@ namespace Transformalize.Transforms.Fluid {
    public class FluidTransform : BaseTransform {
 
       private readonly Func<string, object> _convert;
+      private static readonly FluidParser _parser = new FluidParser();
       private Field[] _input;
 
       public FluidTransform(IContext context = null) : base(context, null) {
@@ -49,7 +50,7 @@ namespace Transformalize.Transforms.Fluid {
          var matches = Context.Entity.GetFieldMatches(Context.Operation.Template);
          _input = input.Union(matches).ToArray();
 
-         if (FluidTemplate.TryParse(Context.Operation.Template, out var template)) {
+         if (_parser.TryParse(Context.Operation.Template, out var template)) {
             var context = new TemplateContext();
             foreach(var row in rows) {
                foreach (var field in _input) {
