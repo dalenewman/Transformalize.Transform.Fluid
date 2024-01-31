@@ -14,7 +14,7 @@
             <add name='Reviewers' type='int' min='0' max='500' />
          </fields>
          <calculated-fields>
-            <add name='Score' raw='true' t='fluid({% assign x = Stars * Reviewers %}&lt;span>{{ x }}&lt;/span>)' />
+            <add name='Score' raw='true' t='fluid({% assign x = Stars | times: Reviewers %}&lt;span>{{ x }}&lt;/span>)' />
          </calculated-fields>
       </add>
    </entities>

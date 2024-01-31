@@ -1,9 +1,8 @@
 ### Fluid Transform
-This is a [liquid template language](https://www.shopify.com/partners/shopify-cheat-sheet) transform for [Transformalize](https://github.com/dalenewman/Transformalize).
+This is a [liquid template language](https://shopify.github.io/liquid) transform for [Transformalize](https://github.com/dalenewman/Transformalize). 
+Here is [a liquid cheat sheet](https://www.shopify.com/partners/shopify-cheat-sheet).
 
-It's implemented using [fluid](https://github.com/sebastienros/fluid) by Sébastien Ros.
-
-> Fluid is an open-source .NET template engine that is as close as possible to the Liquid template language.
+It's implemented in .NET using [fluid](https://github.com/sebastienros/fluid) by Sébastien Ros.
 
 ### Usage
 
@@ -12,7 +11,7 @@ and uses a short-hand variation of the fluid transform to create the `Score` fie
 
 The liquid template is:
 
- `{% assign x = Stars * Reviewers %}<span>{{ x }}</span>`
+ `{% assign x = Stars | times: Reviewers %}<span>{{ x }}</span>`
 
 The arrangement is:
 
@@ -31,7 +30,7 @@ The arrangement is:
             <add name="Reviewers" type="int" min="0" max="500" />
          </fields>
          <calculated-fields>
-            <add name="Score" raw="true" t="fluid({% assign x = Stars * Reviewers %}&lt;span>{{ x }}&lt;/span>)" />
+            <add name="Score" raw="true" t="fluid({% assign x = Stars | times: Reviewers %}&lt;span>{{ x }}&lt;/span>)" />
          </calculated-fields>
       </add>
    </entities>
@@ -50,18 +49,14 @@ Willie,Tromp,1,65,<span>65</span>
 ```
 
 ### Benchmark
-``` ini
-
-BenchmarkDotNet=v0.12.1, OS=Windows 10.0.18363.720 (1909/November2018Update/19H2)
-Intel Core i7-7700HQ CPU 2.80GHz (Kaby Lake), 1 CPU, 8 logical and 4 physical cores
-.NET Core SDK=3.1.201
-  [Host]    : .NET Core 3.1.3 (CoreCLR 4.700.20.11803, CoreFX 4.700.20.12001), X64 RyuJIT
-  RyuJitX64 : .NET Core 3.1.3 (CoreCLR 4.700.20.11803, CoreFX 4.700.20.12001), X64 RyuJIT
-
-Job=RyuJitX64  Jit=RyuJit  Platform=X64  
-
+```ini
+BenchmarkDotNet v0.13.12, Windows 11 (10.0.22621.3007/22H2/2022Update/SunValley2)
+AMD Ryzen 7 5800X, 1 CPU, 16 logical and 8 physical cores
+.NET SDK 8.0.101
+  [Host]     : .NET 8.0.1 (8.0.123.58001), X64 RyuJIT AVX2
+  DefaultJob : .NET 8.0.1 (8.0.123.58001), X64 RyuJIT AVX2
 ```
-|                    Method |     Mean |    Error |   StdDev | Ratio | RatioSD |
-|-------------------------- |---------:|---------:|---------:|------:|--------:|
-|         &#39;10000 test rows&#39; | 662.4 ms | 12.69 ms | 16.05 ms |  1.00 |    0.00 |
-| &#39;10000 rows with 1 fluid&#39; | 706.5 ms |  7.32 ms |  6.49 ms |  1.06 |    0.03 |
+| Method                    | Mean     | Error   | StdDev  | Ratio |
+|-------------------------- |---------:|--------:|--------:|------:|
+| &#39;10000 test rows&#39;         | 198.4 ms | 1.23 ms | 1.15 ms |  1.00 |
+| &#39;10000 rows with 1 fluid&#39; | 209.2 ms | 1.12 ms | 1.05 ms |  1.05 |
