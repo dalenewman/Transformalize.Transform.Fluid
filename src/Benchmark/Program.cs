@@ -11,7 +11,6 @@ using Transformalize.Transforms.Fluid.Autofac;
 
 namespace Benchmark.Core {
 
-   [RyuJitX64Job]
    public class Benchmarks {
 
 
@@ -20,6 +19,9 @@ namespace Benchmark.Core {
          var logger = new NullLogger();
          using (var outer = new ConfigurationContainer(new FluidTransformModule()).CreateScope(@"files\bogus.xml?Size=10000", logger)) {
             var process = outer.Resolve<Process>();
+            foreach (var error in process.Errors()) {
+               Console.Error.WriteLine(error);
+            }
             using (var inner = new Container(new FluidTransformModule(), new BogusModule()).CreateScope(process, logger)) {
                var controller = inner.Resolve<IProcessController>();
                controller.Execute();
@@ -32,6 +34,9 @@ namespace Benchmark.Core {
          var logger = new NullLogger();
          using (var outer = new ConfigurationContainer(new FluidTransformModule()).CreateScope(@"files\bogus-with-transform.xml?Size=10000", logger)) {
             var process = outer.Resolve<Process>();
+            foreach(var error in process.Errors()) {
+               Console.Error.WriteLine(error);
+            }
             using (var inner = new Container(new FluidTransformModule(), new BogusModule()).CreateScope(process, logger)) {
                var controller = inner.Resolve<IProcessController>();
                controller.Execute();
