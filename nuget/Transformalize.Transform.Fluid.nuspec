@@ -2,7 +2,7 @@
 <package>
    <metadata>
       <id>Transformalize.Transform.Fluid</id>
-      <version>0.10.2-beta</version>
+      <version>0.11.1-beta</version>
       <title>Fluid Transform for Transformalize</title>
       <authors>Dale Newman</authors>
       <owners>Dale Newman</owners>
@@ -11,12 +11,12 @@
       <requireLicenseAcceptance>false</requireLicenseAcceptance>
       <description>Fluid Transform for Transformalize</description>
       <releaseNotes>gen maint</releaseNotes>
-      <copyright>Copyright © 2020-2024 Dale Newman</copyright>
+      <copyright>Copyright © 2020-2025 Dale Newman</copyright>
       <tags>etl</tags>
       <dependencies>
          <group targetFramework="netstandard2.0">
-            <dependency id="Transformalize" version="0.10.12-beta" />
-            <dependency id="Fluid.Core" version="2.5.0" />
+            <dependency id="Transformalize" version="0.11.1-beta" />
+            <dependency id="Fluid.Core" version="2.12.0" />
          </group>
       </dependencies>
    </metadata>

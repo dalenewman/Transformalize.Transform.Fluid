@@ -4,10 +4,8 @@ using System.Linq;
 using Transformalize.Configuration;
 using Transformalize.Containers.Autofac;
 using Transformalize.Contracts;
-using Transformalize.Logging;
 using Transformalize.Providers.Bogus.Autofac;
 using Transformalize.Providers.Console;
-using Transformalize.Providers.Console.Autofac;
 using Transformalize.Transforms.Fluid.Autofac;
 
 namespace Test.Integration.Core {
